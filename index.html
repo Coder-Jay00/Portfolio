@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jay Thakkar - CSE Student & Cybersecurity Enthusiast. Building secure digital solutions.">
+    <meta name="keywords" content="Jay Thakkar, Cybersecurity, Web Developer, Portfolio, Python, Flask">
+    <meta name="author" content="Jay Thakkar">
+    <title>Jay Thakkar | Cybersecurity Enthusiast & Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a0f' width='100' height='100' rx='20'/><text x='50' y='68' font-size='50' font-family='monospace' font-weight='bold' fill='%2300d4ff' text-anchor='middle'>JT</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="cyber-bg">
+        <div class="matrix-rain" id="matrixRain"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>JT<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-glow"></div>
+                <span class="badge-text">JT</span>
+            </div>
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Jay Thakkar</h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">I'm a </span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Building secure digital solutions & exploring the depths of cybersecurity
+                </p>
+                <p class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India
+                </p>
+                <p class="hero-tagline">"Code. Secure. Repeat."</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Coder-Jay00" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jay-thakkar-29954a274/" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:coderjt25@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Hey there! I'm <span class="highlight">Jay Thakkar</span>!
+                        I'm a passionate Computer Science Engineering student at <span class="highlight">New LJ
+                            Institute of Engineering & Technology</span>,
+                        with a burning curiosity for all things cybersecurity.
+                    </p>
+                    <p>
+                        Currently, I'm honing my skills as a <span class="highlight">Cybersecurity Intern at Unified
+                            Mentor Private Limited</span>,
+                        where I dive deep into security analysis and threat detection. When I'm not hunting
+                        vulnerabilities,
+                        you'll find me building sleek web applications that combine functionality with aesthetics.
+                    </p>
+                    <p>
+                        I believe in the power of code to solve real-world problems – from creating tools that detect
+                        malware in PDFs
+                        to building platforms that help therapists manage their practice. Every project is an
+                        opportunity to learn,
+                        grow, and make an impact.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projects Deployed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Hackathons</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                        <div class="avatar-container">
+                            <div class="avatar-glow"></div>
+                            <div class="avatar-initials">JT</div>
+                            <div class="avatar-ring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies & Interests Section -->
+    <section id="hobbies" class="section hobbies">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span> Hobbies & Interests
+            </h2>
+            <div class="hobbies-grid">
+                <div class="hobby-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Gaming</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-chess"></i>
+                    <span>Chess</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-flag-checkered"></i>
+                    <span>CTF Challenges</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-guitar"></i>
+                    <span>Guitar</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-music"></i>
+                    <span>Music</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-baseball-ball"></i>
+                    <span>Cricket</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-code"></i>
+                    <span>Developing</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Learning New Things</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span> Skills & Technologies
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-shield-alt"></i> Cybersecurity
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Threat Analysis</span>
+                        <span class="skill-tag">Vulnerability Assessment</span>
+                        <span class="skill-tag">Malware Analysis</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Security Auditing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i> Programming Languages
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i> Frameworks & Libraries
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Tools & Platforms
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">TryHackMe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span> Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <!-- Project 1: PDF Sentinel -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://pdfsentinel.vercel.app/" target="_blank" class="project-link"
+                                    aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Coder-Jay00/PDFSentinel" target="_blank"
+                                    class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-label">Featured Project</div>
+                        <h3 class="project-title">PDF Sentinel</h3>
+                        <p class="project-description">
+                            A security-focused toolkit for static and behavioral analysis of PDF files.
+                            Detects malware, extracts IOCs (Indicators of Compromise), analyzes embedded JavaScript,
+                            and inspects metadata to help security professionals identify threats.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Bootstrap</span>
+                            <span>Security</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: AuraTherapyCare -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://auratherapycare.vercel.app/index.html" target="_blank"
+                                    class="project-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AuraTherapyCare</h3>
+                        <p class="project-description">
+                            A modern management dashboard designed for therapists. Features client management,
+                            session tracking, revenue analytics, and privacy-first encrypted data storage.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Bootstrap</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: FoodQuest -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://foodquest-blue.vercel.app/" target="_blank" class="project-link"
+                                    aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FoodQuest</h3>
+                        <p class="project-description">
+                            A private, invitation-only culinary social platform. Curate restaurant wishlists,
+                            track dining history, and share hidden gems with your trusted inner circle.
+                        </p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>Authentication</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Rewear -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Coder-Jay00/Rewear" target="_blank" class="project-link"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Rewear</h3>
+                        <p class="project-description">
+                            A sustainable fashion project built for the Odoo Hackathon.
+                            Promotes clothing reuse and eco-friendly fashion choices through a modern web platform.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Odoo</span>
+                            <span>Hackathon</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/Coder-Jay00" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span> Experience & Education
+            </h2>
+            <div class="timeline">
+                <!-- Education - Diploma -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2024</span>
+                        <h3 class="timeline-title">Diploma in Computer Engineering</h3>
+                        <p class="timeline-company">LJ University</p>
+                        <p class="timeline-description">
+                            Completed diploma program with hands-on experience in programming,
+                            web development, and computer fundamentals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience - JK Food -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2023</span>
+                        <h3 class="timeline-title">Web Development Intern</h3>
+                        <p class="timeline-company">J K Food and Hospitality</p>
+                        <p class="timeline-description">
+                            Developed a Restaurant Management System using HTML, CSS, and PHP.
+                            Gained practical experience in full-stack web development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education - B.E. -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - 2027</span>
+                        <h3 class="timeline-title">B.E. in Computer Science Engineering</h3>
+                        <p class="timeline-company">New LJ Institute of Engineering & Technology</p>
+                        <p class="timeline-description">
+                            Pursuing my Bachelor's degree with a focus on computer science fundamentals,
+                            software development, and cybersecurity principles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience - Unified Mentor -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Present</span>
+                        <h3 class="timeline-title">Cybersecurity Intern</h3>
+                        <p class="timeline-company">Unified Mentor Private Limited</p>
+                        <p class="timeline-description">
+                            Working on security analysis, threat detection, and vulnerability assessments.
+                            Gaining hands-on experience in real-world cybersecurity operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span> Certifications
+            </h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                    <h4>Basics of Cloud Computing</h4>
+                    <p>Udemy • 2025</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                    <h4>AI Governance & Compliance</h4>
+                    <p>Udemy • 2025</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-shield-virus"></i></div>
+                    <h4>Cybersecurity Threat Landscape</h4>
+                    <p>LinkedIn Learning</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-flag"></i></div>
+                    <h4>TryHackMe Certification</h4>
+                    <p>TryHackMe</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-book"></i></div>
+                    <h4>Coursera Certificate</h4>
+                    <p>Coursera</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-lock"></i></div>
+                    <h4>Data Privacy Awareness</h4>
+                    <p>DSCI & MyGov</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span> Achievements
+            </h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <h4>HackInovate Hackathon</h4>
+                    <p>Participated and built innovative solutions under time constraints</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <h4>Odoo Hackathon</h4>
+                    <p>Developed "Rewear" - A sustainable fashion platform</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <h4>Good Governance Quiz 2024</h4>
+                    <p>Successfully completed the national governance awareness quiz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">07.</span> Services
+            </h2>
+            <p class="section-subtitle">Looking to collaborate? Here's how I can help:</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Building modern, responsive websites and web applications using the latest technologies.
+                        From landing pages to full-stack applications.
+                    </p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Modern UI/UX</li>
+                        <li>Performance Optimized</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity Consulting</h3>
+                    <p>
+                        Security assessments and consulting to help identify vulnerabilities
+                        and strengthen your digital security posture.
+                    </p>
+                    <ul class="service-features">
+                        <li>Security Audits</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Best Practices Guidance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Freelance Projects</h3>
+                    <p>
+                        Open to freelance opportunities and collaborations.
+                        Let's work together to bring your ideas to life.
+                    </p>
+                    <ul class="service-features">
+                        <li>Flexible Engagement</li>
+                        <li>Clear Communication</li>
+                        <li>Quality Delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">08.</span> Get In Touch
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision.
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-info">
+                        <a href="mailto:coderjt25@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>coderjt25@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jay-thakkar-29954a274/" target="_blank"
+                            class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/Coder-Jay00" target="_blank" class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                    </div>
+                    <div class="contact-cta">
+                        <a href="mailto:coderjt25@gmail.com" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Say Hello
+                        </a>
+                        <a href="./certi/JT_Resume.pdf" download class="btn btn-outline btn-lg">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <span class="highlight">Jay Thakkar</span>
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/Coder-Jay00" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jay-thakkar-29954a274/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:coderjt25@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2025 Jay Thakkar. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
