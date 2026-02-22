@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beats - A feature-rich Android music streaming app. Download the APK now.">
+    <title>Beats — Music Streaming App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a0f' width='100' height='100' rx='20'/><text x='50' y='68' font-size='50' font-family='monospace' font-weight='bold' fill='%23f472b6' text-anchor='middle'>♫</text></svg>">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #06060b;
+            --bg-card: rgba(15, 15, 25, 0.7);
+            --text: #e8e8ef;
+            --text-secondary: #8b8b9e;
+            --text-muted: #55556a;
+            --accent: #f472b6;
+            --accent-secondary: #7c3aed;
+            --accent-tertiary: #00d4ff;
+            --gradient: linear-gradient(135deg, #f472b6 0%, #7c3aed 50%, #00d4ff 100%);
+            --gradient-subtle: linear-gradient(135deg, rgba(244, 114, 182, 0.12), rgba(124, 58, 237, 0.12));
+            --border: rgba(255, 255, 255, 0.06);
+            --glow: 0 0 40px rgba(244, 114, 182, 0.15), 0 0 80px rgba(124, 58, 237, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animated BG */
+        .bg-effects {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-effects::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(244, 114, 182, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%);
+            animation: bg-drift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes bg-drift {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-5%, 3%);
+            }
+        }
+
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(244, 114, 182, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(244, 114, 182, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Nav */
+        .topbar {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .topbar-logo:hover {
+            color: var(--accent);
+        }
+
+        .topbar-logo i {
+            margin-right: 6px;
+            color: var(--accent);
+        }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-tertiary);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 0 50px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 32px;
+            background: var(--gradient-subtle);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: var(--glow);
+        }
+
+        .app-icon::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 30px;
+            background: var(--gradient);
+            opacity: 0.3;
+            filter: blur(15px);
+            z-index: -1;
+        }
+
+        .app-icon i {
+            font-size: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-icon-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .app-name {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .app-tagline {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            font-family: inherit;
+            color: white;
+            background: var(--gradient);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.3);
+            letter-spacing: 0.02em;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 40px rgba(244, 114, 182, 0.4);
+        }
+
+        .download-btn i {
+            font-size: 1.2rem;
+        }
+
+        .download-meta {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .download-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Features */
+        .features {
+            padding: 50px 0 60px;
+        }
+
+        .features-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 36px;
+            letter-spacing: -0.01em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(244, 114, 182, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(244, 114, 182, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-card h3 {
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Tech Stack */
+        .tech-section {
+            padding: 0 0 50px;
+            text-align: center;
+        }
+
+        .tech-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            padding: 6px 14px;
+            background: rgba(244, 114, 182, 0.06);
+            border: 1px solid rgba(244, 114, 182, 0.12);
+            border-radius: 6px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Screenshots placeholder */
+        .screenshots {
+            padding: 0 0 60px;
+            text-align: center;
+        }
+
+        .screenshots-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .screenshots-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .screens-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .screen-mock {
+            width: 160px;
+            height: 280px;
+            background: var(--gradient-subtle);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .screen-mock:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--glow);
+        }
+
+        .screen-mock i {
+            font-size: 2rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.6;
+        }
+
+        .screen-mock span {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Warning */
+        .install-note {
+            max-width: 600px;
+            margin: 0 auto 50px;
+            padding: 20px 24px;
+            background: rgba(244, 114, 182, 0.04);
+            border: 1px solid rgba(244, 114, 182, 0.12);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .install-note strong {
+            color: var(--accent);
+        }
+
+        .install-note i {
+            color: var(--accent);
+            margin-right: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--accent-tertiary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .app-name {
+                font-size: 2.2rem;
+            }
+
+            .app-tagline {
+                font-size: 1rem;
+            }
+
+            .download-btn {
+                padding: 16px 32px;
+                font-size: 0.95rem;
+            }
+
+            .screen-mock {
+                width: 130px;
+                height: 230px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .download-meta {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .screens-row {
+                gap: 10px;
+            }
+
+            .screen-mock {
+                width: 110px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-effects">
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <a href="index.html" class="topbar-logo">
+                <i class="fas fa-headphones-alt"></i> Beats
+            </a>
+        </div>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="app-icon">
+                <img src="assets/logos/beats-logo.png" alt="Beats logo" class="app-icon-img">
+            </div>
+            <h1 class="app-name">Beats</h1>
+            <p class="app-tagline">
+                A feature-rich Android music player built from the ground up.
+                Stream, discover, and enjoy music — your way.
+            </p>
+            <a href="beats.apk" download class="download-btn">
+                <i class="fab fa-android"></i> Download APK
+            </a>
+            <div class="download-meta">
+                <span><i class="fas fa-android"></i> Android 8.0+</span>
+                <span><i class="fas fa-shield-alt"></i> Sideload Required</span>
+                <span><i class="fas fa-code-branch"></i> Latest Build</span>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2 class="features-title">✨ What Makes Beats Special</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-music"></i></div>
+                    <h3>Online Streaming</h3>
+                    <p>Search and stream millions of songs directly from the app</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-download"></i></div>
+                    <h3>Offline Playback</h3>
+                    <p>Download tracks and listen without internet connection</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-align-left"></i></div>
+                    <h3>Synced Lyrics</h3>
+                    <p>Real-time synchronized lyrics display while you listen</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Sleep Timer</h3>
+                    <p>Auto-stop playback after a set duration</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bluetooth-b"></i></div>
+                    <h3>Bluetooth Controls</h3>
+                    <p>Full media button support for headphones & speakers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Dynamic Themes</h3>
+                    <p>UI colors adapt to album artwork automatically</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="screenshots">
+            <h2 class="screenshots-title">📱 App Preview</h2>
+            <p class="screenshots-subtitle">A glimpse of the Beats experience</p>
+            <div class="screens-row">
+                <div class="screen-mock">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="screen-mock">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </div>
+                <div class="screen-mock">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Now Playing</span>
+                </div>
+                <div class="screen-mock">
+                    <i class="fas fa-book-open"></i>
+                    <span>Library</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="tech-section">
+            <p class="tech-label">Built With</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Kotlin</span>
+                <span class="tech-tag">ExoPlayer</span>
+                <span class="tech-tag">Room DB</span>
+                <span class="tech-tag">Retrofit</span>
+                <span class="tech-tag">Jetpack</span>
+                <span class="tech-tag">Material 3</span>
+                <span class="tech-tag">Coroutines</span>
+            </div>
+        </section>
+
+        <!-- Install Note -->
+        <div class="install-note">
+            <i class="fas fa-info-circle"></i>
+            <strong>Installation:</strong> Since this is a sideloaded APK, you'll need to enable
+            <strong>"Install from Unknown Sources"</strong> in your Android settings.
+            Go to <strong>Settings → Security → Unknown Sources</strong> and toggle it on before installing.
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built by <a href="index.html">Jay Thakkar</a> · &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+
+</html>

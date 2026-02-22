@@ -1,0 +1,224 @@
+%-------------------------
+% Jay Thakkar — Resume (LaTeX)
+% Compile with: pdflatex resume.tex
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+
+% ---- Colors ----
+\definecolor{accent}{HTML}{0077B5}
+\definecolor{darktext}{HTML}{1A1A2E}
+\definecolor{subtext}{HTML}{444444}
+\definecolor{lighttext}{HTML}{666666}
+\definecolor{ruleline}{HTML}{CCCCCC}
+
+% ---- Hyperlink setup ----
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Jay Thakkar},
+    pdftitle={Jay Thakkar - Resume},
+    pdfsubject={Cybersecurity \& Development}
+}
+
+% ---- Section formatting ----
+\titleformat{\section}
+  {\large\bfseries\color{darktext}\scshape}
+  {}{0em}
+  {}
+  [\color{ruleline}\titlerule]
+
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+% ---- Custom commands ----
+\newcommand{\resumeEntry}[4]{
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{subtext}{\small #2} \\
+    \textit{\textcolor{subtext}{#3}} & \\
+  \end{tabularx}
+  \begin{itemize}[leftmargin=16pt, itemsep=2pt, topsep=2pt, parsep=0pt, label={\textcolor{accent}{\small\textbullet}}]
+    #4
+  \end{itemize}
+  \vspace{4pt}
+}
+
+\newcommand{\educationEntry}[3]{
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{subtext}{\small #2} \\
+    \textit{\textcolor{subtext}{#3}} & \\
+  \end{tabularx}
+  \vspace{4pt}
+}
+
+\newcommand{\projectEntry}[3]{
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{lighttext}{\footnotesize\texttt{#2}} \\
+  \end{tabularx}
+  \vspace{1pt}
+  {\small\textcolor{subtext}{#3}}
+  \vspace{6pt}
+}
+
+\newcommand{\skillGroup}[2]{
+  \noindent\textbf{#1:} {\small #2} \\[4pt]
+}
+
+% ---- Remove page numbers ----
+\pagestyle{empty}
+
+% ---- Tight lists ----
+\setlist[itemize]{leftmargin=16pt, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+\begin{document}
+
+% ====================
+%       HEADER
+% ====================
+\begin{center}
+  {\Huge\bfseries\textcolor{darktext}{Jay Thakkar}} \\[6pt]
+  {\large\textcolor{subtext}{Cybersecurity Enthusiast \textbar{} Full-Stack Developer \textbar{} Android Engineer}} \\[10pt]
+  {\small
+    \faIcon{envelope}~\href{mailto:coderjt25@gmail.com}{coderjt25@gmail.com} \quad
+    \faIcon{map-marker-alt}~Ahmedabad, Gujarat, India \quad
+    \faIcon{github}~\href{https://github.com/Coder-Jay00}{Coder-Jay00} \quad
+    \faIcon{linkedin}~\href{https://www.linkedin.com/in/jay-thakkar-29954a274/}{LinkedIn}
+  }
+\end{center}
+
+\vspace{4pt}
+
+% ====================
+%   PROFESSIONAL SUMMARY
+% ====================
+\section{Professional Summary}
+\small
+Computer Science Engineering student with hands-on experience in cybersecurity and full-stack development. Currently building production-grade security tools — from PDF malware analysis engines to threat intelligence platforms and system monitoring agents. Passionate about solving real-world problems through code, with 11+ projects spanning Android apps, web platforms, and security tooling.
+
+\vspace{2pt}
+
+% ====================
+%      EXPERIENCE
+% ====================
+\section{Experience}
+
+\resumeEntry
+  {Cybersecurity Intern}
+  {Nov 2025 — Present}
+  {Unified Mentor Private Limited}
+  {
+    \item Built \textbf{PDFSentinel} — a malware analysis engine using YARA rules, VirusTotal API, and heuristic scanning to detect malicious PDFs
+    \item Developed \textbf{The Intelligence Brief} — a full-stack news aggregation platform with AI-powered summaries and automated GitHub Actions pipelines
+    \item Created \textbf{WindowsWatch} and \textbf{LinuxWatch} — real-time OS monitoring agents tracking system metrics, user sessions, and security events
+    \item Built \textbf{IPSentry} — a network surveillance tool with IP geolocation, threat scoring, and DNS analysis
+    \item Conducted vulnerability assessments and implemented SIEM-based threat detection workflows
+  }
+
+\resumeEntry
+  {Web Development Intern}
+  {Aug 2023 — Sep 2023}
+  {J K Food and Hospitality}
+  {
+    \item Developed a Restaurant Management System with secure user authentication and XSS prevention
+    \item Implemented role-based access control and responsive frontend using HTML, CSS, and PHP
+  }
+
+% ====================
+%      EDUCATION
+% ====================
+\section{Education}
+
+\educationEntry
+  {B.E. in Computer Science Engineering}
+  {2024 — 2027}
+  {New LJ Institute of Engineering \& Technology, Ahmedabad}
+
+\educationEntry
+  {Diploma in Computer Engineering}
+  {2021 — 2024}
+  {LJ University, Ahmedabad}
+
+% ====================
+%    TECHNICAL SKILLS
+% ====================
+\section{Technical Skills}
+
+\skillGroup{Cybersecurity}{Threat Analysis, Vulnerability Assessment, Malware Analysis, Network Security, Security Auditing, YARA Rules, SIEM}
+
+\skillGroup{Languages}{Python, Kotlin, Java, JavaScript, PHP, HTML5, CSS3}
+
+\skillGroup{App Development}{Android SDK, Jetpack Compose, Room Database, ExoPlayer, Retrofit, Material Design 3}
+
+\skillGroup{Frameworks \& Tools}{Flask, FastAPI, Next.js, React, Docker, PostgreSQL, Git, Supabase, Vercel, Linux}
+
+% ====================
+%      PROJECTS
+% ====================
+\section{Projects}
+
+\projectEntry
+  {Beats — Android Music Streaming App}
+  {Kotlin, ExoPlayer, Room, Retrofit}
+  {Feature-rich music player with online streaming, offline playback, synced lyrics, sleep timer, Bluetooth media controls, and dynamic album-art themes.}
+
+\projectEntry
+  {AuraTherapyCare — Therapist Management Platform}
+  {Flask, PostgreSQL, Supabase}
+  {Full-stack healthcare platform with patient intake, therapist dashboards, analytics visualization, activity logging, and role-based access control.}
+
+\projectEntry
+  {FoodQuest — Food Delivery Platform}
+  {Next.js, React, Supabase}
+  {Full-stack food delivery app with restaurant browsing, cart management, real-time order tracking, and responsive mobile-first design.}
+
+\projectEntry
+  {Cartify — IoT Smart Billing System}
+  {FastAPI, React, PostgreSQL, Docker}
+  {IoT-integrated retail billing system featuring automated cart management, real-time inventory tracking via WebSocket, RFID theft detection, and security alerts.}
+
+\projectEntry
+  {Rewear — Sustainable Fashion Platform}
+  {Python, Odoo}
+  {Built for the Odoo Hackathon — promotes clothing reuse and eco-friendly fashion through a community marketplace.}
+
+% ====================
+%    CERTIFICATIONS
+% ====================
+\section{Certifications}
+
+\begin{itemize}[leftmargin=16pt, itemsep=2pt, label={\textcolor{accent}{\small$\diamond$}}]
+  \item Basics of Cloud Computing \textcolor{lighttext}{\small— Udemy}
+  \item AI Governance \& Compliance \textcolor{lighttext}{\small— Udemy}
+  \item Cybersecurity Threat Landscape \textcolor{lighttext}{\small— LinkedIn Learning}
+  \item TryHackMe Pre-Security Certificate \textcolor{lighttext}{\small— TryHackMe}
+  \item Coursera Certificate \textcolor{lighttext}{\small— Coursera}
+  \item Data Privacy Awareness \textcolor{lighttext}{\small— DSCI \& MyGov}
+  \item Good Governance Quiz 2024 \textcolor{lighttext}{\small— MeitY \& MyGov}
+\end{itemize}
+
+% ====================
+%    ACHIEVEMENTS
+% ====================
+\section{Achievements}
+
+\begin{itemize}[leftmargin=16pt, itemsep=2pt, label={\textcolor{accent}{\small$\diamond$}}]
+  \item \textbf{HackInovate Hackathon} — Built innovative solutions under time constraints
+  \item \textbf{Odoo Hackathon} — Developed ``Rewear'' sustainable fashion platform
+  \item \textbf{Good Governance Quiz 2024} — National governance awareness quiz
+\end{itemize}
+
+\end{document}

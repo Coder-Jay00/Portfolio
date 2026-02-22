@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jay Thakkar — Resume. Cybersecurity Enthusiast & Developer.">
+    <title>Jay Thakkar — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #06060b;
+            --bg-card: rgba(15, 15, 25, 0.7);
+            --text: #e8e8ef;
+            --text-secondary: #a0a0b5;
+            --text-muted: #6b6b85;
+            --accent: #00d4ff;
+            --accent-secondary: #7c3aed;
+            --gradient: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #f472b6 100%);
+            --border: rgba(255, 255, 255, 0.06);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: #1a1a2e;
+                font-size: 10pt;
+                line-height: 1.4;
+            }
+
+            .resume-container {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .topbar,
+            .bg-effects,
+            .print-hide {
+                display: none !important;
+            }
+
+            .resume-header {
+                background: none !important;
+                border: none !important;
+                padding: 0 0 12px !important;
+                margin-bottom: 16px !important;
+                border-bottom: 2px solid #1a1a2e !important;
+            }
+
+            .header-name {
+                background: none !important;
+                -webkit-text-fill-color: #1a1a2e !important;
+                font-size: 22pt !important;
+            }
+
+            .header-title {
+                color: #444 !important;
+            }
+
+            .header-contacts a,
+            .header-contacts span {
+                color: #333 !important;
+            }
+
+            .resume-section {
+                padding: 8px 0 !important;
+                border-bottom: 1px solid #ddd !important;
+            }
+
+            .section-heading {
+                font-size: 11pt !important;
+                color: #1a1a2e !important;
+                background: none !important;
+                -webkit-text-fill-color: #1a1a2e !important;
+                border-bottom: 1px solid #999 !important;
+                padding-bottom: 2px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .section-heading::before {
+                display: none !important;
+            }
+
+            .exp-company,
+            .edu-school,
+            .project-name {
+                color: #333 !important;
+            }
+
+            .exp-date,
+            .edu-date {
+                color: #555 !important;
+            }
+
+            .skill-pill {
+                background: #f0f0f0 !important;
+                color: #333 !important;
+                border: 1px solid #ccc !important;
+            }
+
+            .cert-item {
+                background: none !important;
+                border: none !important;
+                padding: 2px 0 !important;
+            }
+        }
+
+        /* Background */
+        .bg-effects {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: radial-gradient(ellipse at 20% 30%, rgba(0, 212, 255, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(124, 58, 237, 0.03) 0%, transparent 50%);
+        }
+
+        /* Layout */
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Bar */
+        .topbar {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .topbar-btn {
+            font-size: 0.82rem;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .topbar-btn.primary {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .topbar-btn.outline {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid rgba(0, 212, 255, 0.25);
+        }
+
+        .topbar-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Header */
+        .resume-header {
+            text-align: center;
+            padding: 48px 0 36px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        .header-name {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .header-title {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .header-contacts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.85rem;
+        }
+
+        .header-contacts a,
+        .header-contacts span {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .header-contacts a:hover {
+            color: var(--accent);
+        }
+
+        .header-contacts i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* Sections */
+        .resume-section {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .resume-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 3px;
+            height: 16px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 22px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2px;
+        }
+
+        .exp-role {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .exp-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .exp-company {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+            line-height: 1.55;
+        }
+
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.75rem;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 16px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .edu-degree {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .edu-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .edu-school {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skills */
+        .skills-group {
+            margin-bottom: 14px;
+        }
+
+        .skills-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .skills-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            padding: 4px 12px;
+            background: rgba(0, 212, 255, 0.06);
+            border: 1px solid rgba(0, 212, 255, 0.12);
+            border-radius: 6px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 18px;
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2px;
+        }
+
+        .project-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .project-tech-inline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent);
+        }
+
+        .project-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* Certifications */
+        .certs-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 32px;
+        }
+
+        .cert-item {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.55;
+        }
+
+        .cert-item::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.55rem;
+            top: 4px;
+        }
+
+        .cert-source {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+        }
+
+        /* Footer */
+        .resume-footer {
+            text-align: center;
+            padding: 28px 0;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .resume-footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .summary-text {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .header-name {
+                font-size: 2.2rem;
+            }
+
+            .header-contacts {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .certs-list {
+                grid-template-columns: 1fr;
+            }
+
+            .exp-row,
+            .edu-row,
+            .project-row {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-effects"></div>
+
+    <div class="resume-container">
+        <!-- Top Bar -->
+        <div class="topbar print-hide">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <div class="topbar-actions">
+                <button onclick="window.print()" class="topbar-btn outline">
+                    <i class="fas fa-print"></i> Print / Save PDF
+                </button>
+                <a href="resume.pdf" download class="topbar-btn primary">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="resume-header">
+            <h1 class="header-name">Jay Thakkar</h1>
+            <p class="header-title">Cybersecurity Enthusiast · Full-Stack Developer · Android Engineer</p>
+            <div class="header-contacts">
+                <a href="mailto:coderjt25@gmail.com">
+                    <i class="fas fa-envelope"></i> coderjt25@gmail.com
+                </a>
+                <span><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India</span>
+                <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> Coder-Jay00
+                </a>
+                <a href="https://www.linkedin.com/in/jay-thakkar-29954a274/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h2 class="section-heading">Professional Summary</h2>
+            <p class="summary-text">
+                Computer Science Engineering student with hands-on experience in cybersecurity and full-stack
+                development. Currently building production-grade security tools — from PDF malware analysis engines
+                to threat intelligence platforms and system monitoring agents. Passionate about solving real-world
+                problems through code, with 11+ projects spanning Android apps, web platforms, and security tooling.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="resume-section">
+            <h2 class="section-heading">Experience</h2>
+
+            <div class="exp-item">
+                <div class="exp-row">
+                    <span class="exp-role">Cybersecurity Intern</span>
+                    <span class="exp-date">Nov 2025 — Present</span>
+                </div>
+                <div class="exp-company">Unified Mentor Private Limited</div>
+                <ul class="exp-bullets">
+                    <li>Built PDFSentinel — a malware analysis engine using YARA rules, VirusTotal API, and heuristic
+                        scanning to detect malicious PDFs</li>
+                    <li>Developed The Intelligence Brief — a full-stack news aggregation platform with AI-powered
+                        summaries and automated GitHub Actions pipelines</li>
+                    <li>Created WindowsWatch and LinuxWatch — real-time OS monitoring agents tracking system metrics,
+                        user sessions, and security events</li>
+                    <li>Built IPSentry — a network surveillance tool with IP geolocation, threat scoring, and DNS
+                        analysis capabilities</li>
+                    <li>Conducted vulnerability assessments and implemented SIEM-based threat detection workflows</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-row">
+                    <span class="exp-role">Web Development Intern</span>
+                    <span class="exp-date">Aug 2023 — Sep 2023</span>
+                </div>
+                <div class="exp-company">J K Food and Hospitality</div>
+                <ul class="exp-bullets">
+                    <li>Developed a Restaurant Management System with secure user authentication and XSS prevention</li>
+                    <li>Implemented role-based access control and responsive frontend using HTML, CSS, and PHP</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2 class="section-heading">Education</h2>
+
+            <div class="edu-item">
+                <div class="edu-row">
+                    <span class="edu-degree">B.E. in Computer Science Engineering</span>
+                    <span class="edu-date">2024 — 2027</span>
+                </div>
+                <div class="edu-school">New LJ Institute of Engineering & Technology, Ahmedabad</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-row">
+                    <span class="edu-degree">Diploma in Computer Engineering</span>
+                    <span class="edu-date">2021 — 2024</span>
+                </div>
+                <div class="edu-school">LJ University, Ahmedabad</div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="resume-section">
+            <h2 class="section-heading">Technical Skills</h2>
+
+            <div class="skills-group">
+                <div class="skills-label">Cybersecurity</div>
+                <div class="skills-pills">
+                    <span class="skill-pill">Threat Analysis</span>
+                    <span class="skill-pill">Vulnerability Assessment</span>
+                    <span class="skill-pill">Malware Analysis</span>
+                    <span class="skill-pill">Network Security</span>
+                    <span class="skill-pill">Security Auditing</span>
+                    <span class="skill-pill">YARA Rules</span>
+                    <span class="skill-pill">SIEM</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">Languages</div>
+                <div class="skills-pills">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">Kotlin</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">JavaScript</span>
+                    <span class="skill-pill">PHP</span>
+                    <span class="skill-pill">HTML5</span>
+                    <span class="skill-pill">CSS3</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">App Development</div>
+                <div class="skills-pills">
+                    <span class="skill-pill">Android SDK</span>
+                    <span class="skill-pill">Jetpack Compose</span>
+                    <span class="skill-pill">Room Database</span>
+                    <span class="skill-pill">ExoPlayer</span>
+                    <span class="skill-pill">Retrofit</span>
+                    <span class="skill-pill">Material Design 3</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-label">Frameworks & Tools</div>
+                <div class="skills-pills">
+                    <span class="skill-pill">Flask</span>
+                    <span class="skill-pill">FastAPI</span>
+                    <span class="skill-pill">Next.js</span>
+                    <span class="skill-pill">React</span>
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">Git</span>
+                    <span class="skill-pill">Supabase</span>
+                    <span class="skill-pill">Vercel</span>
+                    <span class="skill-pill">Linux</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-section">
+            <h2 class="section-heading">Projects</h2>
+
+            <div class="project-item">
+                <div class="project-row">
+                    <span class="project-name">Beats — Android Music Streaming App</span>
+                    <span class="project-tech-inline">Kotlin · ExoPlayer · Room · Retrofit</span>
+                </div>
+                <p class="project-desc">
+                    Feature-rich music player with online streaming, offline playback, synced lyrics, sleep timer,
+                    Bluetooth media controls, and dynamic album-art themes.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-row">
+                    <span class="project-name">AuraTherapyCare — Therapist Management Platform</span>
+                    <span class="project-tech-inline">Flask · PostgreSQL · Supabase</span>
+                </div>
+                <p class="project-desc">
+                    Full-stack healthcare platform with patient intake, therapist dashboards, analytics visualization,
+                    activity logging, and role-based access control.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-row">
+                    <span class="project-name">FoodQuest — Food Delivery Platform</span>
+                    <span class="project-tech-inline">Next.js · React · Supabase</span>
+                </div>
+                <p class="project-desc">
+                    Full-stack food delivery app with restaurant browsing, cart management, real-time order tracking,
+                    and responsive mobile-first design.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-row">
+                    <span class="project-name">Cartify — IoT Smart Billing System</span>
+                    <span class="project-tech-inline">FastAPI · React · PostgreSQL · Docker</span>
+                </div>
+                <p class="project-desc">
+                    IoT-integrated retail billing system featuring automated cart management, real-time inventory
+                    tracking
+                    via WebSocket, RFID theft detection, and security alerts.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="project-row">
+                    <span class="project-name">Rewear — Sustainable Fashion Platform</span>
+                    <span class="project-tech-inline">Python · Odoo</span>
+                </div>
+                <p class="project-desc">
+                    Built for the Odoo Hackathon — promotes clothing reuse and eco-friendly fashion through a community
+                    marketplace.
+                </p>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-section">
+            <h2 class="section-heading">Certifications</h2>
+            <div class="certs-list">
+                <div class="cert-item">Basics of Cloud Computing <span class="cert-source">— Udemy</span></div>
+                <div class="cert-item">AI Governance & Compliance <span class="cert-source">— Udemy</span></div>
+                <div class="cert-item">Cybersecurity Threat Landscape <span class="cert-source">— LinkedIn
+                        Learning</span></div>
+                <div class="cert-item">TryHackMe Pre-Security <span class="cert-source">— TryHackMe</span></div>
+                <div class="cert-item">Coursera Certificate <span class="cert-source">— Coursera</span></div>
+                <div class="cert-item">Data Privacy Awareness <span class="cert-source">— DSCI & MyGov</span></div>
+                <div class="cert-item">Good Governance Quiz 2024 <span class="cert-source">— MeitY & MyGov</span></div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="resume-section">
+            <h2 class="section-heading">Achievements</h2>
+            <div class="certs-list">
+                <div class="cert-item">HackInovate Hackathon — Built innovative solutions under time constraints</div>
+                <div class="cert-item">Odoo Hackathon — Developed "Rewear" sustainable fashion platform</div>
+                <div class="cert-item">Good Governance Quiz 2024 — National governance awareness quiz</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="resume-footer print-hide">
+            <p>Built by <a href="index.html">Jay Thakkar</a> · &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+
+</html>
