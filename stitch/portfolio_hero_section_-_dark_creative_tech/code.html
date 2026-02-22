@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Hero Section - Dark Creative Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#1313ec",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101022",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-grid {
+            background-image: 
+                linear-gradient(to right, rgba(19, 19, 236, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(19, 19, 236, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px 10px rgba(19, 19, 236, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative min-h-screen w-full flex flex-col overflow-hidden">
+<!-- Background Elements: Glowing Grid & Decorative Circles -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none hero-grid">
+<div class="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute top-[20%] right-[15%] w-px h-[60%] bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+<div class="absolute top-[40%] left-[10%] w-[80%] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+</div>
+<!-- Navigation -->
+<header class="relative z-50 flex items-center justify-between px-6 py-6 md:px-12 lg:px-24">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-black tracking-tighter">Jay<span class="text-primary">.</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors uppercase tracking-widest" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors uppercase tracking-widest" href="#">Expertise</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors uppercase tracking-widest" href="#">Resume</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors uppercase tracking-widest" href="#">Contact</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/20">
+                Let's Talk
+            </button>
+</header>
+<!-- Main Hero Content -->
+<main class="relative z-10 flex-1 flex flex-col items-start justify-center px-6 md:px-12 lg:px-24 py-20 max-w-7xl mx-auto w-full">
+<div class="space-y-2 mb-6">
+<span class="inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-[0.3em] bg-primary/10 px-3 py-1 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Available for Work
+                </span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-tighter mb-8 max-w-5xl">
+                Jay — <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Creative Developer</span>
+</h1>
+<div class="max-w-2xl space-y-8">
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed">
+                    Crafting immersive digital experiences through clean code and innovative design. 
+                    Specializing in high-performance web applications and interactive visuals for forward-thinking brands.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all shadow-xl shadow-primary/30 group">
+                        Explore My Work
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="flex items-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-8 py-4 rounded-lg text-base font-bold transition-all">
+                        View Resume
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50">
+<span class="text-[10px] uppercase tracking-[0.4em] font-bold text-slate-500">Scroll</span>
+<div class="w-[2px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</main>
+<!-- Stats / Expertise Bar (Subtle) -->
+<section class="relative z-10 w-full border-t border-slate-200 dark:border-white/5 bg-white/50 dark:bg-black/20 backdrop-blur-sm px-6 md:px-12 lg:px-24 py-8">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="text-primary material-symbols-outlined text-3xl">code</span>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Fullstack Engineering</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs">React, Next.js, Node</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-primary material-symbols-outlined text-3xl">animation</span>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Motion Design</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs">Framer Motion, GSAP</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-primary material-symbols-outlined text-3xl">token</span>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Creative Coding</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs">Three.js, WebGL, Shaders</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-4">
+<span class="text-primary material-symbols-outlined text-3xl">bolt</span>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Optimization</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs">SEO &amp; Performance focus</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Image Placeholder (Abstract Pattern) -->
+<div class="hidden">
+<img data-alt="Abstract blue glowing digital grid pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyMZfImpSxv1MAskzFA0HFCzbC8Y8ndE9a8YvbHaUfggOx2KQqI_CIP0uX7tlZvlW3Ds5U95AVvYcXAFNJRlU1p-ymJsECKA_bXcjLCqFMTtBOP1qy4vDiXqAcHg0txhpZCKWFHsUmOTyhRNEqoxHeHhw75bwxW7eLRvF9pje1F4ZfK-ZBgLaN8Jd_mV-zd3m1rF6C2-N2U7f5JjZejaXA6m79O0ch8iBqNEGE8PFl62YeM_VF9VTRe5RPtLKeuwnpBtu5ibi2iJZ7"/>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="bg-slate-50 dark:bg-slate-950/50 py-10 px-6 border-t border-slate-200 dark:border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-sm font-medium">© 2024 Jay Creative. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">data_object</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

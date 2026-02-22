@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Contact Page - Dark Theme</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                        "charcoal": "#1a1a2e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+            -webkit-text-fill-color: white;
+            -webkit-box-shadow: 0 0 0px 1000px #101022 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 antialiased font-display selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-slate-800 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">grid_view</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Studio.A</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium text-primary" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95">
+                        Hire Me
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col justify-center">
+<section class="max-w-7xl mx-auto px-6 py-20 w-full">
+<div class="max-w-4xl mb-20">
+<h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tighter">
+                        Let's build <br/>
+<span class="text-primary italic">something together.</span>
+</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+<div class="lg:col-span-7">
+<form action="#" class="space-y-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-slate-500" for="name">Name</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-700 focus:border-primary focus:ring-0 px-0 py-4 text-lg transition-colors placeholder:text-slate-600" id="name" name="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-slate-500" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-slate-700 focus:border-primary focus:ring-0 px-0 py-4 text-lg transition-colors placeholder:text-slate-600" id="email" name="email" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-slate-500" for="message">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-slate-700 focus:border-primary focus:ring-0 px-0 py-4 text-lg transition-colors placeholder:text-slate-600 resize-none" id="message" name="message" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="group flex items-center gap-4 bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-full text-lg font-bold transition-all transform hover:scale-[1.02] active:scale-95" type="submit">
+                                    Send Message
+                                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">send</span>
+</button>
+</div>
+</form>
+</div>
+<div class="lg:col-span-4 lg:col-start-9 space-y-12">
+<div>
+<h3 class="text-xs uppercase tracking-[0.2em] font-black text-slate-500 mb-6">Socials</h3>
+<ul class="space-y-4">
+<li>
+<a class="group flex items-center justify-between py-2 text-2xl font-medium hover:text-primary transition-all" href="#">
+                                        LinkedIn
+                                        <span class="material-symbols-outlined text-slate-600 group-hover:text-primary group-hover:translate-x-1 transition-all">north_east</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between py-2 text-2xl font-medium hover:text-primary transition-all" href="#">
+                                        GitHub
+                                        <span class="material-symbols-outlined text-slate-600 group-hover:text-primary group-hover:translate-x-1 transition-all">north_east</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between py-2 text-2xl font-medium hover:text-primary transition-all" href="#">
+                                        Twitter
+                                        <span class="material-symbols-outlined text-slate-600 group-hover:text-primary group-hover:translate-x-1 transition-all">north_east</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="pt-8 border-t border-slate-800">
+<h3 class="text-xs uppercase tracking-[0.2em] font-black text-slate-500 mb-6">Contact Details</h3>
+<p class="text-lg text-slate-300">hello@studio-a.design</p>
+<p class="text-lg text-slate-300 mt-2">+1 (555) 000-0000</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-slate-800 py-16 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-1.5 rounded text-primary">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+</div>
+<span class="font-bold tracking-tight">Studio.A</span>
+</div>
+<p class="text-slate-500 text-sm">Crafting premium digital experiences since 2018.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">draw</span>
+</a>
+</div>
+<div class="text-sm text-slate-500">
+                    © 2024 Creative Professional. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+
+</body></html>

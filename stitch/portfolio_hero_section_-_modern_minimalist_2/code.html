@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jay | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#fbfbfb",
+                        "background-dark": "#0a0a0b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display antialiased;
+            }
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative min-h-screen flex flex-col">
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200/50 dark:border-white/5 bg-white/80 dark:bg-background-dark/80">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white transition-transform">
+<span class="material-symbols-outlined text-2xl font-bold">terminal</span>
+</div>
+<span class="text-xl font-black tracking-tighter uppercase">Jay.</span>
+</a>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+<div class="h-4 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+<button class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all shadow-lg shadow-primary/20">
+<span>Resume</span>
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</nav>
+<button class="md:hidden text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center pt-20">
+<div class="max-w-5xl mx-auto px-6 w-full text-center py-20">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-12">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Available for new projects
+                </div>
+<h1 class="text-6xl md:text-8xl lg:text-[104px] font-black leading-[1.05] tracking-tight text-slate-900 dark:text-white mb-12">
+                    Hi, I'm Jay.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-b from-primary to-blue-600">I build digital experiences.</span>
+</h1>
+<p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-16 font-medium">
+                    Specializing in crafting minimalist, high-performance web applications with a focus on user experience and technical excellence.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 rounded-full bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-all shadow-2xl shadow-primary/30 flex items-center justify-center gap-2 group">
+                        View Portfolio
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto px-10 py-5 rounded-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold text-lg border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all flex items-center justify-center gap-2">
+                        Get In Touch
+                    </button>
+</div>
+<div class="mt-24 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-40 grayscale">
+<span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500 w-full mb-2">Expertise</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">architecture</span>
+<span class="text-sm font-bold tracking-tight">Fullstack Architecture</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">token</span>
+<span class="text-sm font-bold tracking-tight">UI Engineering</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+<span class="text-sm font-bold tracking-tight">Performance Ops</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="pb-12 flex flex-col items-center justify-center gap-4">
+<div class="w-[1px] h-12 bg-gradient-to-b from-slate-200 to-transparent dark:from-slate-800"></div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Scroll to explore</span>
+</footer>
+</div>
+
+</body></html>

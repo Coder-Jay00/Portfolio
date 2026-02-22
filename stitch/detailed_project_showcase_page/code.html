@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Showcase | Nexus Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-white">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Portfolio</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Resume
+                </button>
+</nav>
+</div>
+</header>
+<main class="pt-20">
+<!-- Full-Bleed Hero Image -->
+<section class="relative w-full h-[70vh] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+<img alt="Nexus Dashboard Interface" class="w-full h-full object-cover" data-alt="Modern data visualization dashboard showing financial charts and dark UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBLrHk4CqvvLylISgexFVofBnDtGZW79wKm5OaWw-0FLyBxj514ycw1VAYh1zs0hf38_LjFPIQFGffRG8iC9O0jaKUFJ4dE-FdTy03I5RjvdWtWg_5X2gZKs5uRvzL23NEQwiAIcmTPX6mCJJw8TTXXSulecJSsu8FOWRucGgS13tw8SZGhrBX6hP7V9mMub3N65NPAD0gi7rSSt-2sFy0jOnGVtfYJACyvB-q20NXi_2FWYmk6T63DqHklxisGFOYoS7B0XRge6HX"/>
+</section>
+<!-- Project Header Info -->
+<section class="max-w-7xl mx-auto px-6 -mt-32 relative z-20 pb-20">
+<div class="flex flex-col gap-4">
+<h1 class="serif-title text-6xl md:text-8xl text-white drop-shadow-2xl">Nexus Dashboard</h1>
+<p class="text-xl md:text-2xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                    An end-to-end data visualization platform for high-frequency Fintech operations.
+                </p>
+</div>
+<!-- Project Details Content -->
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 py-12">
+<!-- Sidebar: Metadata (Sticky) -->
+<aside class="lg:col-span-3">
+<div class="sticky top-32 flex flex-col gap-10">
+<div class="space-y-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Role</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-sm">person</span>
+<p class="text-slate-700 dark:text-slate-300 font-medium">Lead Frontend Developer</p>
+</div>
+</div>
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Timeline</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-sm">calendar_today</span>
+<p class="text-slate-700 dark:text-slate-300 font-medium">4 Months (2023)</p>
+</div>
+</div>
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Tech Stack</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">React</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">TypeScript</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">D3.js</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">Tailwind CSS</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">Framer Motion</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+<span>Visit Live Site</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_outward</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="lg:col-span-9 space-y-24">
+<!-- Section: The Challenge -->
+<section class="space-y-6">
+<h2 class="text-3xl font-bold tracking-tight">The Challenge</h2>
+<div class="prose prose-invert max-w-none text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-4">
+<p>
+                            Modern fintech professionals are overwhelmed by the sheer volume of real-time data. Traditional dashboards often suffer from "data-noise," where critical signals are lost in a sea of secondary information.
+                        </p>
+<p>
+                            The Nexus project was born out of the need for a cognitive-first interface that could process 10,000+ data points per second while remaining intuitive for traders who need to make split-second decisions.
+                        </p>
+</div>
+<div class="pt-8">
+<img alt="Data visualization detail" class="w-full rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800" data-alt="Complex data visualization showing interconnected nodes and financial trends" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZP89ljbffpo0o1DlNQsSU2bkgRAceca4XMP6nMOz5EHQDYwX1-2-vHfG6wQhVfoBDfqE5Ul9AEZZWlvHAiXAgAQvLJ5F61P6cAMzHZW7sQvDanxja7gRladhws7sJCN2ueVbhLkA63cbrfCCV45iV3tUlQWcHXYhpYCooKdtiyesRMnHbygI1yUmcvRxUqBquAmyVcqs3hjx9RUj8zsuCLahMp0Bkm_iK03QwBx2ZakZdroxntJJR6dbq_xc15vuKvAjQ9FqiOwFo"/>
+</div>
+</section>
+<!-- Section: The Solution -->
+<section class="space-y-6">
+<h2 class="text-3xl font-bold tracking-tight">The Solution</h2>
+<div class="prose prose-invert max-w-none text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-4">
+<p>
+                            We implemented a modular "Layered Information Architecture." By using D3.js for custom-rendered Canvas components, we reduced CPU usage by 40%, allowing for butter-smooth interactions even under heavy load.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+<div class="p-6 bg-slate-100 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800">
+<h4 class="font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+                                    Real-time Sync
+                                </h4>
+<p class="text-sm opacity-80">WebSocket integration for millisecond-latency updates across the entire ecosystem.</p>
+</div>
+<div class="p-6 bg-slate-100 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800">
+<h4 class="font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">extension</span>
+                                    Modular Blocks
+                                </h4>
+<p class="text-sm opacity-80">Drag-and-drop widget system allowing users to build their own trading environment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Full Width Demo Screenshot -->
+<section>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+<img alt="Mobile app extension" class="w-full transition-transform duration-500 group-hover:scale-105" data-alt="Clean mobile application UI with dark theme and blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcPHTS4F4vkqE9dMl_pmCyJObpykMSHUyDpYlMD3ZxOaYAim-BPJKzHko5jk3dKq8KHDhUfWGSKKyMmR9Pk2HJ8-YoAUXR-DFabD4IO9qd24aHtuX_b8gbGWZrYVCvpz7sJBbdZejTDT-A-XdeAlZeJwuzAaD-6ZNvZDvgnrdS4Fhgc82x5T-v7I8KZ4DcYsjvJu7XNC6OFtphVzFr7P06zOD3ewCi_KGFBIrggYweYvgrnZzrJ96JPZdp5duwjiCxPvnKOKDuw9OC"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white shadow-xl">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</div>
+</div>
+</div>
+<p class="text-center text-sm text-slate-500 mt-4 italic">Interactive Demo: Mobile Companion App</p>
+</section>
+<!-- Section: Key Features -->
+<section class="space-y-10">
+<h2 class="text-3xl font-bold tracking-tight">Key Features</h2>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">Predictive Analytics</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Using ML-driven patterns to highlight potential market volatility before it occurs.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">Enterprise Security</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">End-to-end encrypted data pipelines ensuring institutional-grade privacy.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">Dynamic Themes</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Automated color shifting based on market sentiment and user preference.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">api</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">Unified SDK</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">A robust API allowing third-party developers to extend the Nexus core.</p>
+</div>
+</li>
+</ul>
+</section>
+<!-- Navigation Footer -->
+<footer class="pt-20 pb-40 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-sm font-medium text-slate-500 uppercase tracking-widest">Next Project</span>
+<a class="serif-title text-4xl hover:text-primary transition-colors flex items-center gap-4" href="#">
+                                Quantum Wallet
+                                <span class="material-symbols-outlined text-4xl">east</span>
+</a>
+</div>
+<button class="w-full md:w-auto px-10 py-5 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all text-lg shadow-2xl shadow-primary/30 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">launch</span>
+                            Visit Live Site
+                        </button>
+</div>
+</footer>
+</div>
+</section>
+</section></main>
+<!-- Simple Footer for Socials -->
+<footer class="bg-slate-100 dark:bg-slate-900/50 py-12 px-6 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm text-slate-500">© 2024 Portfolio. Designed with precision.</p>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

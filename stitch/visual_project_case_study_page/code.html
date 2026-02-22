@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visual Project Case Study | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-nav {
+            background: rgba(246, 246, 248, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined font-bold">view_quilt</span>
+<span class="font-bold text-lg tracking-tight text-slate-900 dark:text-slate-100">Portfolio</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+                    Let's Talk
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Header -->
+<section class="max-w-4xl mx-auto px-6 text-center mb-24">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Case Study 2024</span>
+<h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">E-commerce Redesign: <br/>The Minimalist Shift</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                A deep dive into transforming a complex legacy system into a streamlined, mobile-first shopping experience focused on user conversion and minimalist aesthetics.
+            </p>
+</section>
+<!-- Main Visual Features (Alternating) -->
+<section class="space-y-32 mb-32">
+<!-- Feature 1: Image Left -->
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-slate-200 dark:border-slate-800">
+<img alt="Dashboard Interface" class="w-full h-auto object-cover" data-alt="A clean light-themed ecommerce analytics dashboard mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_KkVRKIEOev-iRmvUoxsb-6_navrHAycoR-IdQke7I7lYt9dibxhsOLTizhbNuqsxxY8rzFqPXtb2w4Q_XLNx3DywJPPFpk-Ae2vaVeEHc4psVYzOc9CM_O3rYtrF6_8oCFzjHhf4hapUuQY9rA4XJBJaLL2WtpL5LE-a1mJhZ3b6gVF4A6l9d3p740I3nrmwqCh-cRC4UWBOONPIi5CsSOLlmIV45dAVkHKaox5-hhJjDCAaUlVq3aCc1B-o9jyO-N_wW7x8i10l"/>
+</div>
+<div class="max-w-md">
+<h3 class="text-3xl font-bold mb-4">Intuitive Dashboard</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                        The core of the experience focuses on a clean, data-driven dashboard that surfaces the most important metrics for users at a glance, reducing cognitive load.
+                    </p>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span>User retention increased by 24%</span>
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Feature 2: Image Right -->
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 flex justify-end">
+<div class="max-w-md text-right">
+<h3 class="text-3xl font-bold mb-4">Mobile-First Strategy</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                            Every component was built with a mobile-first mindset, ensuring that the transition from desktop to handheld devices is seamless and visually consistent.
+                        </p>
+<div class="flex items-center justify-end gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined">smartphone</span>
+<span>Fully responsive architecture</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-slate-200 dark:border-slate-800">
+<img alt="Mobile View Mockups" class="w-full h-auto object-cover" data-alt="Three mobile screens showing a shopping application interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhn4rvaXHNDI1h7ipQknFVmheIO7vFuMwQv2iWn_8vDeMsTWRcMXq_tSgD_bKfdhWjYpmJpY-s15WkSyRxycClXx029e4R79pHG9vhk1sLaIdhFgnngR1SJ3o1n0OnPLzOYXIbP5SpSZxx2prlp2VEy1Yz6OdhMO6fJi5WjxYPSNlDnODHYtF_pex2GfXp97vqplm55Hdg1TDRxc7JuI8isX1tv9knTEC_KcA7V5aoWedJnHH63zVUE-6FeI1Gz_1Jzubdpf07ppmB"/>
+</div>
+</div>
+<!-- Feature 3: Image Left -->
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-slate-200 dark:border-slate-800">
+<img alt="Design System" class="w-full h-auto object-cover" data-alt="A structured design system with typography and color swatches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc6H6dmSMzQJlwR9B05wQzc0Ztusmz_vVSTiWFcztouYThtVTILhOqurfQpKcLGZUNlNvAbe4Ou_40IcdG6BygYqJJvNDkxMcN79HYRIVEe_O8Af8tj5-rNF3Gx5La2-ezmFfu4tf67Sn56lUqv5tUOi6FS4gs1eUsEmLmNedc3TTZX4WzX_whYYY4DAZiToZ-OXY4PRVo-ZXAPONsHZ9IIfOUUYHHPqDOiuncjvrAIvqHWsrptea-qknJAOuajqB7jqYnc2oaPaHJ"/>
+</div>
+<div class="max-w-md">
+<h3 class="text-3xl font-bold mb-4">Scalable Design System</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                        A robust library of reusable components was developed to maintain visual harmony and accelerate development cycles for future updates.
+                    </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Components</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Tokens</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-white dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Behind the Scenes</h2>
+<p class="text-slate-600 dark:text-slate-400">The journey from initial sketches to high-fidelity prototypes.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-square">
+<img alt="Sketch 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Hand drawn website wireframe sketches on paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBWN4mEoWDbcgkWx_CtWcEBFaulbpJ0zEORlJL8dHPK3xOttsLSjwLp24H3QJLMmi7yxFilMQhihbjMoPRp11oeqv9qimvpjGDuEDr_3Mfxt3MP4RwLrbhZ7CIZ_gJtyY5YyTbLG-WHdpTqgLkgwpYYMXapalEDFXF147Ggx5ik00J_AoXrwL8ZEa5U5jUtiqXHEC5YlqCnWJrea_HikV72_nZkwWZ93CgiU8lUOwR2zNTX6aEpY6g7V-DElkaX4jTU-c3XYKmh_Lr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-white text-xs font-bold uppercase">Initial Ideation</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-square">
+<img alt="Wireframe 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Low fidelity digital wireframes in a design tool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwPgK_JCuWxT7kpzUcZVreSpMUfX3Ej4BLXymz0r7Rw2it_eb7Fq47Azyy8rbuJhWqmgwgVjODEMiIkw4YMrEgq_ygIULlO1sYVIP3-ZD-5NMy2UIc1xRJfYP74ZFIXNmTQhRl7FKyDpeZZYJLIDeoXsEfaruI9lmvsvg8-Jy10dDWQHSMdf2i_9ZfxVgol_XBCCtXqnHD6ActKmlv_NzBdjqdLvJD9GqU69Vztc1gME1yl89DQA2AkKHLrJJtM08Kh8IMGhwLKno0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-white text-xs font-bold uppercase">Lo-Fi Wireframes</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-square">
+<img alt="Color Testing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Close up of a screen showing color palette exploration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBAZXGn1Nq4RmP_14WMI7NHzdg7urFmcKrcBxbEcYVWHW08Ge-d87lhpi3AxyOhANnNg3rhLaJUrYC8PD6961dt7O0D6yiJlajquHpziAyWlQboIIzKpU23driRn1LgjENDSoQlaWlCTM5-INVRbyLwDEAwdhqikgcfs091lJQaCRiM4RD-6xOcBnyhzK_RKhzXFqOchHDPrgaFf8tqTrxJ7da39IvY9EBD75krHTJXJEnHMZ-0dKxFsnMPJJH4LNAXLF7dKO4M4ub"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-white text-xs font-bold uppercase">Color Exploration</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-square">
+<img alt="Prototypes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Macro shot of user interface prototype details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIKynF98fgmzSv2fdLiKh5iAecs2n3wJYV_QK_zKI865FuE4ospGjEJoAP86RMxocbBVJDCE7CbeKm0WbXLpLjZ8PCvKLB3EVOsQW00HrhgdWQ5cikzRZqeFnWp14nRxQZvvUeCg_vtYFJfSK-HrDV1qPq9FSGv6rSyTwDDWhQX7GAdnMGGhB1wgHAMOx6MlFieSqhmE2dztYSt_kKDRBYZIPc8_nZfOkcGN4COFXUaQ2S5CsD53c3CmSBglZ_0CUDhxCXa82qMDp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-white text-xs font-bold uppercase">Interactive Testing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 text-center px-6">
+<h2 class="text-3xl font-bold mb-10">Thanks for scrolling!</h2>
+<div class="flex flex-col items-center gap-6">
+<a class="inline-flex items-center justify-center min-w-[240px] bg-primary text-white h-16 rounded-xl text-lg font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/25" href="#">
+                    Back to Work
+                </a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-primary flex items-center gap-2 transition-colors" href="#">
+                    Next Project
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined">copyright</span>
+<span class="text-sm font-medium">2024 Portfolio Design by Alex Rivera</span>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</footer>
+</body></html>

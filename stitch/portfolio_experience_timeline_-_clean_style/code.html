@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Experience Timeline - Clean Style</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1313ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101022",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #1313ec 0%, #e2e8f0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Alex Rivera</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold text-primary" href="#">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">download</span>
+                Resume
+            </button>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 py-20">
+<!-- Section Header -->
+<div class="mb-20 text-center md:text-left">
+<h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Professional Experience</h2>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-xl">
+                A chronological look at my journey in software engineering and product design over the last 7 years.
+            </p>
+</div>
+<!-- Experience Timeline -->
+<div class="relative">
+<!-- Central Line -->
+<div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800 -translate-x-1/2 hidden md:block"></div>
+<!-- Timeline Item 1 -->
+<div class="relative mb-24 group">
+<div class="flex flex-col md:flex-row items-start md:items-center">
+<!-- Date (Left for Desktop) -->
+<div class="hidden md:flex flex-1 justify-end pr-16 text-right">
+<div>
+<span class="text-primary font-bold text-sm uppercase tracking-widest">2021 — Present</span>
+<p class="text-slate-400 dark:text-slate-500 text-sm mt-1 font-medium">Remote, San Francisco</p>
+</div>
+</div>
+<!-- Icon Node -->
+<div class="absolute left-0 md:left-1/2 size-12 bg-white dark:bg-slate-900 border-2 border-primary rounded-full flex items-center justify-center -translate-x-1/2 z-10 shadow-xl group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary font-bold">rocket_launch</span>
+</div>
+<!-- Content (Right for Desktop) -->
+<div class="flex-1 pl-12 md:pl-16 mt-1 md:mt-0">
+<div class="md:hidden mb-2">
+<span class="text-primary font-bold text-xs uppercase tracking-widest">2021 — Present</span>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Company logo for Tech Corp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWdf2rxncA9FKdBQMLPvrj2JPS11CVUgnP7TtFGQkhoxXK9XNYOULOWnag-3F6CtvM_Zn57Xo0HTdOnrD3nzW4KpET_gg0mJvVc5OYvZjLUPaw_4CtwkwTuLQrnTElI4Ul9d18ALWh2EDzEXNftY4iL-oM5F9dkv7okjuo7YaL_H13llRJ6-idKbrI4-zAnEO2eWTCmSHjMyd-o3SPejl9nkSUP0kHdz2efbAK-RgsDo_wQHfYxitWLsWFl2KN5p3ur1JEPeUtrLcX"/>
+</div>
+<div>
+<h3 class="text-xl font-bold">Senior Frontend Developer</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Tech Corp Systems</p>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Led the migration of a legacy monolithic frontend to a modern Micro-frontend architecture using React and Module Federation.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Spearheaded the development of a company-wide design system, reducing design-to-code time by 35%.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Mentored 4 junior developers and implemented standardized code review processes that reduced production bugs by 20%.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative mb-24 group">
+<div class="flex flex-col md:flex-row-reverse items-start md:items-center">
+<!-- Date (Right for Desktop) -->
+<div class="hidden md:flex flex-1 justify-start pl-16 text-left">
+<div>
+<span class="text-slate-500 dark:text-slate-400 font-bold text-sm uppercase tracking-widest">2019 — 2021</span>
+<p class="text-slate-400 dark:text-slate-500 text-sm mt-1 font-medium">New York, NY</p>
+</div>
+</div>
+<!-- Icon Node -->
+<div class="absolute left-0 md:left-1/2 size-12 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-full flex items-center justify-center -translate-x-1/2 z-10 shadow-lg group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">brush</span>
+</div>
+<!-- Content (Left for Desktop) -->
+<div class="flex-1 pr-0 md:pr-16 pl-12 md:pl-0 mt-1 md:mt-0">
+<div class="md:hidden mb-2">
+<span class="text-slate-500 dark:text-slate-400 font-bold text-xs uppercase tracking-widest">2019 — 2021</span>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Creative Studio minimalist icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPQrVNWFY2d8cm9ftb1PXWN1dJqh8KWIKYjiKvHk-EdXVGqfQr2-e1LI1OAN4jHds2DTgiGVK4AW5Vk9wWsdHeHhHSb94NrWCNRtxkBPo2LmCZvGioEmmLLBdJKXNjOAZkUoVluzSS7O3yuok3BXJuXrZbYxZj-NWGBd9mS4Epl4ihWqgPeE3uiwyX3B5Xm7dYvLPNIQH3tzKTEIji7I7vLnDg1-9NDlDQiuakOnWYxmw002J2njD6y2LstviH-57ab-4ltV0rLmqy"/>
+</div>
+<div>
+<h3 class="text-xl font-bold">UI/UX Designer</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Creative Studio Inc.</p>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Designed end-to-end user flows for a fintech mobile app with over 500k monthly active users.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Conducted weekly user research sessions and translated findings into high-fidelity prototypes.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Collaborated closely with product managers to define the long-term product roadmap.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative mb-24 group">
+<div class="flex flex-col md:flex-row items-start md:items-center">
+<!-- Date (Left for Desktop) -->
+<div class="hidden md:flex flex-1 justify-end pr-16 text-right">
+<div>
+<span class="text-slate-500 dark:text-slate-400 font-bold text-sm uppercase tracking-widest">2017 — 2019</span>
+<p class="text-slate-400 dark:text-slate-500 text-sm mt-1 font-medium">Austin, TX</p>
+</div>
+</div>
+<!-- Icon Node -->
+<div class="absolute left-0 md:left-1/2 size-12 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-full flex items-center justify-center -translate-x-1/2 z-10 shadow-lg group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">code</span>
+</div>
+<!-- Content (Right for Desktop) -->
+<div class="flex-1 pl-12 md:pl-16 mt-1 md:mt-0">
+<div class="md:hidden mb-2">
+<span class="text-slate-500 dark:text-slate-400 font-bold text-xs uppercase tracking-widest">2017 — 2019</span>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="StartUp Inc modern square logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXQWN7sxFYGWUAHcHjqzI20y99GLM6cX75oaw2AxGGqeJa8vYEloApj8GLcImbaIOEaVK6OeNtG-ghNRDisi_IEqdcSx5svP21pm0KAG-dYEn6Ys--12Xr8tVkDMSkLeA2ZX2UozYAXlF8l7BPFI-lK5DgPdKOYPeICdj-lFQt7FTmLG56qk1v12bMWQmn4Mc1AH7ZGUuSU57BJ6ca-mykWMdKENfgcos4Sj6Ksnbj5btEQV3VMSNWbDSG7BJi_8xjwtp_VyQir1NG"/>
+</div>
+<div>
+<h3 class="text-xl font-bold">Junior Web Developer</h3>
+<p class="text-slate-500 dark:text-slate-400 font-medium">StartUp Inc.</p>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Built and maintained responsive landing pages using HTML, CSS, and vanilla JavaScript.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Improved website SEO score from 65 to 98 through performance optimization and semantic markup.</span>
+</li>
+<li class="flex gap-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+<span>Integrated third-party APIs for marketing automation and payment processing.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Final Call to Action -->
+<div class="mt-32 flex flex-col items-center gap-6">
+<div class="text-center">
+<h4 class="text-2xl font-bold mb-2">Want to see the full picture?</h4>
+<p class="text-slate-500 dark:text-slate-400">Download my comprehensive resume for a deep dive into my skill set.</p>
+</div>
+<button class="bg-primary text-white flex items-center gap-3 px-10 py-5 rounded-xl text-lg font-bold hover:bg-primary/90 transition-all hover:-translate-y-1 shadow-2xl shadow-primary/30">
+<span class="material-symbols-outlined text-2xl">download_for_offline</span>
+                Download Full Resume (PDF)
+            </button>
+<p class="text-slate-400 text-sm italic">Updated as of October 2023</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 py-12">
+<div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 grayscale opacity-60">
+<div class="size-8 bg-slate-800 rounded-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<span class="font-bold">AR.</span>
+</div>
+<div class="flex gap-8 text-slate-400 dark:text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">Dribbble</a>
+</div>
+<p class="text-slate-400 dark:text-slate-500 text-sm">© 2024 Alex Rivera. Built with precision.</p>
+</div>
+</footer>
+</body></html>

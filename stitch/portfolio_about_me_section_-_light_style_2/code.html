@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - About Me</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1313ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101022",
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"],
+              "sans": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Newsreader', serif;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="flex items-center justify-between px-6 md:px-20 lg:px-40 py-8 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight font-sans">Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-primary" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<button class="bg-primary text-white px-6 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity">
+                Hire Me
+            </button>
+</nav>
+</header>
+<main class="flex-1 flex justify-center py-20 md:py-40 px-6 md:px-20 lg:px-40">
+<div class="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+<div class="lg:col-span-5 flex flex-col justify-start">
+<div class="sticky top-40">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-6 block">01 — Background</span>
+<h1 class="font-display text-8xl md:text-9xl lg:text-[10rem] font-bold leading-none text-slate-900 dark:text-white opacity-10 select-none absolute -left-4 -top-12">
+                        About
+                    </h1>
+<h2 class="font-display text-6xl md:text-7xl lg:text-8xl font-bold leading-tight relative z-10">
+                        About <span class="block">Me.</span>
+</h2>
+<div class="w-16 h-1 bg-primary mt-8"></div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col">
+<div class="space-y-10 text-slate-700 dark:text-slate-300">
+<p class="font-display text-2xl md:text-3xl leading-snug text-slate-900 dark:text-slate-100 font-medium">
+                        I bridge the gap between complex engineering and human-centric design, believing that every pixel tells a story.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+<p class="font-display text-lg leading-relaxed">
+                            With over 8 years of experience in the digital space, I've transitioned from a visual artist to a full-stack developer. This dual perspective allows me to build applications that are not only high-performing but aesthetically pleasing and intuitive.
+                        </p>
+<p class="font-display text-lg leading-relaxed">
+                            I specialize in building scalable frontend architectures and robust backend systems for startups and industry leaders. My approach is rooted in minimalism—eliminating the unnecessary so the meaningful can speak.
+                        </p>
+</div>
+<p class="font-display text-lg leading-relaxed">
+                        When I'm not pushing commits, I'm usually exploring the intersection of generative art and typography, or mentoring aspiring developers in the open-source community. My work is defined by a commitment to performance, accessibility, and visual harmony.
+                    </p>
+</div>
+<div class="mt-20 pt-12 border-t border-slate-200 dark:border-slate-800">
+<h3 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-10">Technical Toolkit</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">React.js</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Frontend Architecture</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">code</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">TypeScript</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Typed Systems</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">dns</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Node.js</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Backend Infrastructure</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">palette</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Figma</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">UI/UX Interface Design</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">layers</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Tailwind CSS</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Utility-First Styling</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="text-primary group-hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">database</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">PostgreSQL</h4>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Data Modeling</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex items-center gap-8">
+<a class="group inline-flex items-center gap-3 text-primary font-bold transition-all" href="#">
+<span class="border-b-2 border-primary group-hover:border-transparent transition-all pb-1">Download Resume</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-y-1 transition-transform">download</span>
+</a>
+<div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="px-6 md:px-20 lg:px-40 py-12 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm text-slate-500 font-sans">© 2024 Design Portfolio. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest" href="#">GitHub</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest" href="#">Twitter</a>
+</div>
+</footer>
+</div>
+
+</body></html>

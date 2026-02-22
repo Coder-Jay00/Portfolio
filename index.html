@@ -24,7 +24,12 @@
 <body>
     <!-- Animated Background -->
     <div class="cyber-bg">
-        <div class="matrix-rain" id="matrixRain"></div>
+        <!-- Ambient Glowing Orbs -->
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+
+        <div class="matrix-rain" id="matrixRain" data-opacity="0"></div>
         <div class="grid-overlay"></div>
     </div>
 
@@ -58,34 +63,40 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <div class="badge-glow"></div>
-                <span class="badge-text">JT</span>
-            </div>
-            <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Jay Thakkar</h1>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!-- Availability Badge -->
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Work</span>
+                </div>
+
+                <h1 class="hero-name">
+                    Jay —<br>
+                    <span class="hero-accent">Creative</span>
+                    <span class="hero-accent">Developer</span>
+                </h1>
+
                 <div class="hero-title-wrapper">
                     <span class="hero-title-prefix">I'm a </span>
                     <span class="typed-text" id="typedText"></span>
                     <span class="cursor">|</span>
                 </div>
+
                 <p class="hero-description">
-                    Building secure digital solutions & exploring the depths of cybersecurity
+                    Building secure digital solutions & exploring the depths of cybersecurity.
+                    Specializing in web applications, Android apps, and security tooling.
                 </p>
-                <p class="hero-location">
-                    <i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India
-                </p>
-                <p class="hero-tagline">"Code. Secure. Repeat."</p>
+
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-folder-open"></i> View Projects
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="fas fa-folder-open"></i> Explore My Work
                     </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    <a href="resume.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-file-alt"></i> View Resume
                     </a>
                 </div>
+
                 <div class="hero-social">
                     <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer"
                         class="social-link" aria-label="GitHub">
@@ -98,6 +109,42 @@
                     <a href="mailto:coderjt25@gmail.com" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Strip -->
+        <div class="expertise-strip">
+            <div class="container">
+                <div class="expertise-items">
+                    <div class="expertise-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <span class="expertise-title">Cybersecurity</span>
+                            <span class="expertise-sub">Threat Analysis, SIEM</span>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <span class="expertise-title">Web Development</span>
+                            <span class="expertise-sub">React, Next.js, Flask</span>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <span class="expertise-title">App Development</span>
+                            <span class="expertise-sub">Kotlin, Jetpack Compose</span>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <span class="expertise-title">Security Tools</span>
+                            <span class="expertise-sub">YARA, Malware Analysis</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -546,20 +593,11 @@
 
                 <!-- Windows Monitoring Agent -->
                 <article class="project-card" data-category="internship">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/Coder-Jay00/Windows_Monitoring_System" target="_blank"
-                                    rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-icon">
-                            <i class="fab fa-windows"></i>
-                        </div>
+                    <div class="project-image-bg">
+                        <i class="fab fa-windows watermark-icon"></i>
                     </div>
-                    <div class="project-content">
+                    <div class="project-overlay-darken"></div>
+                    <div class="project-overlay-content">
                         <div class="project-label">Internship — Unified Mentor</div>
                         <h3 class="project-title">Windows Monitoring Agent</h3>
                         <p class="project-description">
@@ -572,17 +610,21 @@
                             <span>psutil</span>
                             <span>WMI</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Coder-Jay00/Windows_Monitoring_System" target="_blank"
+                                rel="noopener noreferrer" class="project-link" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </article>
 
                 <!-- Password Cracking Suite -->
                 <article class="project-card" data-category="internship">
-                    <div class="project-image">
-                        <div class="project-icon">
-                            <i class="fas fa-key"></i>
-                        </div>
+                    <div class="project-image-bg">
+                        <i class="fas fa-key watermark-icon"></i>
                     </div>
-                    <div class="project-content">
+                    <div class="project-overlay-darken"></div>
+                    <div class="project-overlay-content">
                         <div class="project-label">Internship — Unified Mentor</div>
                         <h3 class="project-title">Credential Attack Suite</h3>
                         <p class="project-description">
@@ -595,6 +637,10 @@
                             <span>Cryptography</span>
                             <span>Security Audit</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer"
+                                class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </article>
 
@@ -602,12 +648,11 @@
 
                 <!-- Cartify -->
                 <article class="project-card featured" data-category="academic">
-                    <div class="project-image">
-                        <div class="project-icon">
-                            <i class="fas fa-cart-shopping"></i>
-                        </div>
+                    <div class="project-image-bg">
+                        <i class="fas fa-cart-shopping watermark-icon"></i>
                     </div>
-                    <div class="project-content">
+                    <div class="project-overlay-darken"></div>
+                    <div class="project-overlay-content">
                         <div class="project-label">Academic Project</div>
                         <h3 class="project-title">Cartify — Smart Billing System</h3>
                         <p class="project-description">
@@ -622,17 +667,20 @@
                             <span>Docker</span>
                             <span>WebSocket</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer"
+                                class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </article>
 
                 <!-- Rewear -->
                 <article class="project-card" data-category="personal">
-                    <div class="project-image">
-                        <div class="project-icon">
-                            <i class="fas fa-recycle"></i>
-                        </div>
+                    <div class="project-image-bg">
+                        <i class="fas fa-recycle watermark-icon"></i>
                     </div>
-                    <div class="project-content">
+                    <div class="project-overlay-darken"></div>
+                    <div class="project-overlay-content">
                         <div class="project-label">Hackathon Project</div>
                         <h3 class="project-title">Rewear</h3>
                         <p class="project-description">
@@ -643,6 +691,10 @@
                             <span>Python</span>
                             <span>Odoo</span>
                             <span>Hackathon</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer"
+                                class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </article>
@@ -882,37 +934,48 @@
             <h2 class="section-title">
                 <span class="title-number">09.</span> Get In Touch
             </h2>
-            <div class="contact-content">
-                <div class="contact-text">
-                    <p>
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                        vision.
-                        Whether you have a question or just want to say hi, feel free to reach out!
+            <div class="contact-content contact-grid">
+                <div class="contact-info">
+                    <p class="contact-subtitle-top">Let's collaborate</p>
+                    <a href="mailto:coderjt25@gmail.com" class="massive-email">
+                        coderjt25@gmail.com
+                    </a>
+
+                    <p class="contact-subtitle">
+                        Whether you have a project in mind or just want to say hi, my inbox is always open.
                     </p>
-                    <div class="contact-info">
-                        <a href="mailto:coderjt25@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>coderjt25@gmail.com</span>
-                        </a>
+
+                    <div class="contact-cta">
                         <a href="https://www.linkedin.com/in/jay-thakkar-29954a274/" target="_blank"
-                            rel="noopener noreferrer" class="contact-item">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span>LinkedIn Profile</span>
+                            rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
                         <a href="https://github.com/Coder-Jay00" target="_blank" rel="noopener noreferrer"
-                            class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Profile</span>
-                        </a>
-                    </div>
-                    <div class="contact-cta">
-                        <a href="mailto:coderjt25@gmail.com" class="btn btn-primary btn-lg">
-                            <i class="fas fa-paper-plane"></i> Say Hello
+                            class="btn btn-outline btn-lg">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                         <a href="resume.pdf" download class="btn btn-outline btn-lg">
-                            <i class="fas fa-download"></i> Download Resume
+                            <i class="fas fa-download"></i> Resume
                         </a>
                     </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" action="https://formsubmit.co/coderjt25@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit btn-lg">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

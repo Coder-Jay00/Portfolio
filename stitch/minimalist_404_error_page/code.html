@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - Digital Void | Creative Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .text-outline {
+            -webkit-text-stroke: 2px #1313ec;
+            color: transparent;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(circle, #1313ec10 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(180deg, rgba(19, 19, 236, 0.05) 0%, rgba(19, 19, 236, 0) 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+<!-- Subtle Background Elements -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+<div class="bg-grid-pattern absolute inset-0 opacity-50"></div>
+<div class="blob -top-20 -left-20"></div>
+<div class="blob top-1/2 -right-20"></div>
+</div>
+<div class="relative flex min-h-screen flex-col">
+<!-- Navigation Header -->
+<header class="flex items-center justify-between px-6 py-6 md:px-12 lg:px-24">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Creative Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:opacity-90 transition-all">
+                    Hire Me
+                </button>
+</nav>
+<button class="md:hidden text-slate-900">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 text-center">
+<div class="relative">
+<!-- Large Outlined 404 -->
+<h1 class="text-[120px] md:text-[240px] font-bold leading-none text-outline select-none">
+                    404
+                </h1>
+<!-- Floating Decorative Icon -->
+<div class="absolute -top-4 -right-4 md:-top-8 md:-right-8 bg-white dark:bg-slate-800 p-4 rounded-full shadow-xl border border-slate-100 dark:border-slate-700 animate-bounce">
+<span class="material-symbols-outlined text-primary text-3xl md:text-4xl">explore_off</span>
+</div>
+</div>
+<div class="max-w-xl mt-8 space-y-6">
+<div class="space-y-2">
+<h2 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+                        Oops! You've ventured into the digital void.
+                    </h2>
+<p class="text-lg text-slate-500 dark:text-slate-400 font-medium">
+                        The page you're looking for doesn't exist or has been moved to another dimension.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full text-base font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/25" href="#">
+<span class="material-symbols-outlined">home</span>
+                        Back to Home
+                    </a>
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#">
+                        View Recent Work
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer / Minimal Links -->
+<footer class="px-6 py-12 md:px-12 lg:px-24 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+<div class="flex items-center gap-6">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary" href="#">Instagram</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary" href="#">Dribbble</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary" href="#">LinkedIn</a>
+</div>
+<p class="text-xs font-medium">© 2024 Creative Studio. All rights reserved.</p>
+</footer>
+</div>
+<!-- Small Visual Accents (Optional/Minimalist) -->
+<div class="fixed bottom-10 left-10 hidden xl:block">
+<div class="flex flex-col gap-4">
+<div class="w-1 h-20 bg-primary/20 rounded-full overflow-hidden">
+<div class="w-full h-1/2 bg-primary rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter [writing-mode:vertical-lr] text-primary/40">Status: Lost</span>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="fixed top-1/4 right-20 opacity-10 hidden lg:block">
+<svg class="text-primary fill-none stroke-current stroke-1" height="200" viewbox="0 0 100 100" width="200">
+<circle cx="50" cy="50" r="40"></circle>
+<path d="M50 10 L50 90 M10 50 L90 50"></path>
+</svg>
+</div>
+</body></html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Featured Projects Grid</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1313ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">grid_view</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Studio.A</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95">
+                        Hire Me
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-24 text-center md:text-left">
+<div class="max-w-3xl">
+<h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter">
+                        Selected <span class="text-primary italic">Works</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed max-w-2xl">
+                        A collection of high-end digital experiences, specialized in modern SaaS architectures, complex fintech dashboards, and premium e-commerce interfaces.
+                    </p>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="max-w-7xl mx-auto px-6 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Project Card 1 -->
+<div class="group relative project-card cursor-pointer overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 aspect-[4/3]">
+<div class="absolute inset-0 project-image transition-transform duration-700 ease-out bg-cover bg-center" data-alt="Modern high-fidelity web dashboard mockup with charts and graphs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxhj0CAJ5jHAJ6s5YPvnGQk_nvKatOTX5_WJfSi1Ge91-9eY8516-WjrJybuBKPeCmHAZrqURZI4w0eLVXxgqVGBn28pig2doDU7LFTe2q6dT_p_4XIp9-QYA73jZyRcy2edDJQ-zXrfB8L0AQvntO22T8CHL_aPUhGWTm5cops3yWdQGrQK1jzO15RdriGti0tFLsuaRh-Zqb1A_RrVeKmM--9WoOleqF9_FGCaCdKfw_fcMLLf5XUq0kyKb5xE1YoReGPWT6vARH');">
+</div>
+<div class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/60 transition-colors duration-500"></div>
+<div class="absolute inset-0 project-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<span class="text-primary font-bold uppercase tracking-widest text-xs mb-3">Fintech / Web App</span>
+<h3 class="text-3xl font-bold text-white mb-4">Nexus Financial Suite</h3>
+<p class="text-slate-300 font-light mb-8 max-w-sm line-clamp-2">Complete redesign of a legacy banking platform with real-time analytics and custom reporting tools.</p>
+<div class="flex items-center gap-2 text-white font-semibold group/link">
+<span>View Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative project-card cursor-pointer overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 aspect-[4/3] md:mt-24">
+<div class="absolute inset-0 project-image transition-transform duration-700 ease-out bg-cover bg-center" data-alt="Sleek e-commerce mobile application interface mockup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBztHAp_I8NP4evD5WXvBu6tctpi2OS7V-jDWt1j_1xfnWUvAz97LHATLS7ZMDDXXYqScsxatbJPWoono5CIUiz1tjfiKgB8IWe4gnnxNJ4OJ8SIrmzXLmyxOwJ5IAr8fmD2Ri3uCqgGT7pmKCjkTBCpjLtMkfWlAnFH9x3GdMiyNLwwjWEwQmqfOppM_LkyvcJcoPjMnav4jdiNYw33ca6YfmIkaoKwwT599hRYfWDCib2Lc3pbX6946IoYkdjpUCTmbJpDYNz9sV9');">
+</div>
+<div class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/60 transition-colors duration-500"></div>
+<div class="absolute inset-0 project-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<span class="text-primary font-bold uppercase tracking-widest text-xs mb-3">Mobile / E-commerce</span>
+<h3 class="text-3xl font-bold text-white mb-4">Luxe Retail Experience</h3>
+<p class="text-slate-300 font-light mb-8 max-w-sm line-clamp-2">High-performance React Native application for a boutique fashion house with AR try-on features.</p>
+<div class="flex items-center gap-2 text-white font-semibold group/link">
+<span>View Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative project-card cursor-pointer overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 aspect-[4/3]">
+<div class="absolute inset-0 project-image transition-transform duration-700 ease-out bg-cover bg-center" data-alt="Abstract minimalist design interface with soft purple accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbSDnf-jVL-8_1L0nn0NFa84p158t-VC8tJOJVNd-ge_aUWiwl-IxJOWwsGgQsP-hFz1KPL9vNm6Cs7-de17PO4x0wZkmUlmJalWjyIdeGKYwQljEImVRWUNZ0ActYYVAekTB8ElsVojx6fKMn36W1A2NBl9XnU_JUTTinO2AjNVQWzOIqlq23lIP_lnbH7XjVBbjPgN61HvWjduBXrpQ6iQ-fZpwQ0FC_KbBY88j2Mb8053YTCQvgKeE9W7iQDI3H5TIhUFSmbNw-');">
+</div>
+<div class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/60 transition-colors duration-500"></div>
+<div class="absolute inset-0 project-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<span class="text-primary font-bold uppercase tracking-widest text-xs mb-3">Branding / Identity</span>
+<h3 class="text-3xl font-bold text-white mb-4">Aura Design System</h3>
+<p class="text-slate-300 font-light mb-8 max-w-sm line-clamp-2">Developing a scalable multi-platform design language for a global tech consultancy.</p>
+<div class="flex items-center gap-2 text-white font-semibold group/link">
+<span>View Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group relative project-card cursor-pointer overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 aspect-[4/3] md:mt-24">
+<div class="absolute inset-0 project-image transition-transform duration-700 ease-out bg-cover bg-center" data-alt="SaaS analytics tool desktop view with dark theme" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJEY0qtzmIJzcMGaU0q0Uv6ca0ke7W26Cvhg5ynC4tQCS-8dqMP4eT_JeXfiakZ-iMlidJsPpFMy686I_iAOtilmPJbWly8kotmYiC1kJjB3c5UduRQWB9dvuJqlyCRu81c6PfC4TsBceG2VzwbaDBNxtvgaptHmEJmXJTOLES0HHgBk9NG8r0wljw2iCQ6OHPNonLpMm9HNnsLofFdj1Kw2Kqv0HkG-36DAL3CPiYFzsQB02BvAIB47M-fus6jWJ15zs-NlC8Jjf5');">
+</div>
+<div class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/60 transition-colors duration-500"></div>
+<div class="absolute inset-0 project-overlay opacity-0 transition-opacity duration-500 flex flex-col justify-end p-10">
+<span class="text-primary font-bold uppercase tracking-widest text-xs mb-3">SaaS / Productivity</span>
+<h3 class="text-3xl font-bold text-white mb-4">Flux Task Manager</h3>
+<p class="text-slate-300 font-light mb-8 max-w-sm line-clamp-2">A minimalist task management tool designed for deep work and distraction-free productivity.</p>
+<div class="flex items-center gap-2 text-white font-semibold group/link">
+<span>View Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA -->
+<div class="mt-24 text-center">
+<button class="inline-flex items-center gap-3 px-10 py-5 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full font-bold text-lg transition-all duration-300">
+                        Explore Full Archive
+                        <span class="material-symbols-outlined">auto_awesome_motion</span>
+</button>
+<p class="mt-8 text-slate-500 dark:text-slate-400 font-medium">Looking for something specific? <a class="text-primary underline underline-offset-4" href="#">Get in touch.</a></p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-16 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-1.5 rounded text-primary">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+</div>
+<span class="font-bold tracking-tight">Studio.A</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Crafting premium digital experiences since 2018.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">draw</span>
+</a>
+</div>
+<div class="text-sm text-slate-500 dark:text-slate-400">
+                    © 2024 Creative Professional. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>
