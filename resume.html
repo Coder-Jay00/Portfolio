@@ -505,14 +505,28 @@
         }
 
         /* Responsive */
-        @media (max-width: 640px) {
-            .header-name {
-                font-size: 2.2rem;
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 0 20px;
             }
+            .header-name {
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
+            }
+            .topbar {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            .topbar-actions {
+                width: 100%;
+                justify-content: center;
+            }
+        }
 
+        @media (max-width: 640px) {
             .header-contacts {
                 flex-direction: column;
-                gap: 8px;
+                gap: 12px;
                 align-items: center;
             }
 
@@ -524,7 +538,24 @@
             .edu-row,
             .project-row {
                 flex-direction: column;
-                gap: 2px;
+                gap: 4px;
+                align-items: flex-start;
+            }
+            
+            .topbar-btn {
+                padding: 10px 14px;
+                font-size: 0.75rem;
+                flex: 1;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .resume-header {
+                padding: 32px 0 24px;
+            }
+            .section-heading {
+                font-size: 0.9rem;
             }
         }
     </style>

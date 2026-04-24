@@ -443,17 +443,22 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
             .features-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
 
             .app-name {
-                font-size: 2.2rem;
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
             }
 
             .app-tagline {
                 font-size: 1rem;
+                padding: 0 10px;
             }
 
             .download-btn {
@@ -468,9 +473,14 @@
         }
 
         @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
             .download-meta {
                 flex-direction: column;
-                gap: 6px;
+                gap: 8px;
+                align-items: center;
             }
 
             .screens-row {
@@ -478,8 +488,19 @@
             }
 
             .screen-mock {
-                width: 110px;
-                height: 200px;
+                width: calc(50% - 10px);
+                max-width: 140px;
+                height: 220px;
+            }
+            
+            .app-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .app-icon-img {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
