@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     initNavbar();
     initTypingEffect();
-    initMatrixRain();
+    // initMatrixRain();
     initScrollAnimations();
     initSmoothScroll();
     initActiveNavLink();
@@ -50,11 +50,11 @@ function initNavbar() {
 function initTypingEffect() {
     const typedText = document.getElementById('typedText');
     const roles = [
-        'Cybersecurity Enthusiast',
-        'Web Developer',
-        'App Developer',
-        'CTF Player',
-        'Security Researcher'
+        'Cybersecurity Specialist',
+        'Security Researcher',
+        'Offensive Security Tooler',
+        'Vulnerability Analyst',
+        'Pentester'
     ];
 
     let roleIndex = 0;
