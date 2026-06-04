@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coder-jay00.github.io/Portfolio/sitemap.xml
+Sitemap: https://jayportfolio-one.vercel.app/sitemap.xml
